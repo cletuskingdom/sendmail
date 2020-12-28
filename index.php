@@ -12,7 +12,7 @@
 		</form>
 
 		<script type="text/javascript">
-			$('#bookS').submit(function(e){
+			$('#sendmail').submit(function(e){
 			  (e).preventDefault();
 
 			    $.ajax({

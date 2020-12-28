@@ -17,7 +17,7 @@
         if (empty($email) or empty($message)){
           $response = ['status' => 0, 'message' => "Sorry, please fill all the fields!"];
         }else{
-          $to = $email;
+          $to = "cletuskingdom@gmail.com";
           $subject = "Testing mail!!!";
           $msg = $message;
 

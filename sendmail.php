@@ -25,8 +25,10 @@
           $header .= "Cc:afgh@somedomain.com \r\n";
           $header .= "MIME-Version: 1.0\r\n";
           $header .= "Content-type: text/html\r\n";
+
+          $retval = mail ($to,$subject,$msg,$header);
           
-          if(mail($to, $subject, $msg, $header)){
+          if( $retval == true ){
             $response = ['status' => 1, 'message' => "Mail sent."];
           }else {
             $response = ['status' => 0, 'message' => "The mail wasn't sent."];

@@ -19,8 +19,9 @@
         }else{
           $to = "cletuskingdom@gmail.com";
           $subject = "Testing mail!!!";
+          $headers = "From: Cletus Kingdom";
   
-          if( mail($to,$subject,$message) ){
+          if( mail($to,$subject,$message,$headers) ){
             $response = ['status' => 1, 'message' => "Mail sent."];
           }else {
             $response = ['status' => 0, 'message' => "The mail wasn't sent."];

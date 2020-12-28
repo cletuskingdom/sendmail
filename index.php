@@ -11,7 +11,7 @@
 			<button type="submit">Send mail</button>
 		</form>
 
-		<script type="text/javascript">
+		<script>
 			$('#sendmail').submit(function(e){
 			  (e).preventDefault();
 

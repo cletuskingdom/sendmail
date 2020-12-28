@@ -20,8 +20,13 @@
           $to = $email;
           $subject = "Testing mail!!!";
           $msg = $message;
+
+          $header = "From:abc@somedomain.com \r\n";
+          $header .= "Cc:afgh@somedomain.com \r\n";
+          $header .= "MIME-Version: 1.0\r\n";
+          $header .= "Content-type: text/html\r\n";
           
-          if(mail($to, $subject, $msg)){
+          if(mail($to, $subject, $msg, $header)){
             $response = ['status' => 1, 'message' => "Mail sent."];
           }else {
             $response = ['status' => 0, 'message' => "The mail wasn't sent."];

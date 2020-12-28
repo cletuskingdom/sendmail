@@ -11,17 +11,10 @@
   switch ($requestingPage):
     case "mail":
       if ($_SERVER["REQUEST_METHOD"] == 'POST'){
-        $name = test_input($_POST['name']);
-        $phone = test_input($_POST['phone']);
         $email = test_input($_POST['email']);
-        $gender = test_input($_POST['gender']);
-        $location = test_input($_POST['location']);
         $message = test_input($_POST['message']);
-        date_default_timezone_set("Africa/Lagos");
-        $bookTime = date("D, d M Y h:i:s A");
-        $subject = "Service Booked!!!";
 
-        if (empty($name) or empty($phone) or empty($email) or empty($gender) or empty($location) or empty($message)){
+        if (empty($email) or empty($phone) or empty($email) or empty($gender) or empty($location) or empty($message)){
           $response = array('status' => 0, 'message' => "Du måste fylla alla ingångar!");
         }else{
           require_once 'fetch.php';
